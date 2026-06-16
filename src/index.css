@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-gold-50: #FAF6ED;
+  --color-gold-100: #F4EAD6;
+  --color-gold-200: #ECD2AD;
+  --color-gold-300: #E2B980;
+  --color-gold-400: #D0A766;
+  --color-gold-500: #BC9651; /* Premium warm champagne-metallic gold from logo */
+  --color-gold-600: #9C7334; /* Darker luxury contrast gold */
+  --color-gold-750: #825B24;
+  --color-gold-800: #664619;
+  --color-gold-900: #4A3110;
+  
+  --color-luxury-black: #1A1A1A; /* Text charcoal black */
+  --color-charcoal: #EFEFEF; /* Clean light shadow accent card-dark background option */
+  --color-card-dark: #FFFFFF; /* Pure White premium material card background */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    font-family: var(--font-sans);
+    background-color: #F7F7F7; /* Pristine Light Grey canvas from Logo */
+    color: #1A1A1A; /* Dark premium charcoal for text readability */
+  }
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 130px;
+    }
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F7F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59B27;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a78120;
+}
+
+/* Luxury animations */
+@keyframes gold-shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-gold-shine {
+  background-size: 200% auto;
+  animation: gold-shine 4s linear infinite;
+}
+
+/* Glassmorphism helpers matching active theme style */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 155, 39, 0.15);
+}
+
+.luxury-border-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-border-hover:hover {
+  border-color: rgba(197, 155, 39, 0.4);
+  box-shadow: 0 10px 30px rgba(197, 155, 39, 0.08);
+}
