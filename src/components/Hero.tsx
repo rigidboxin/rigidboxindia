@@ -113,10 +113,20 @@ export default function Hero({ onNavigate }: HeroProps) {
               <div className="absolute inset-0 rounded-full border border-dashed border-gold-500/20 animate-[spin_40s_linear_infinite]" />
               <div className="absolute inset-4 rounded-full border border-gold-500/5 animate-[spin_20s_linear_infinite_reverse]" />
               
-              {/* Premium Floating Packaging Vector Art */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 lg:w-56 lg:h-56 border border-gold-500/30 rounded-xl bg-white backdrop-blur-md p-4 flex flex-col justify-between shadow-lg relative group hover:border-gold-500 duration-500 overflow-hidden">
-                  
+{/* Premium Floating Packaging Vector Art */}
+<div className="absolute inset-0 flex items-center justify-center">
+  <div 
+    onClick={() => onNavigate('configurator')}
+    title="Click to design your own box in our 3D Advisor/Configurator"
+    className="w-48 h-48 lg:w-56 lg:h-56 border border-gold-500/30 rounded-xl bg-white backdrop-blur-md p-4 flex flex-col justify-between shadow-lg relative group hover:border-gold-500 hover:shadow-xl duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-1"
+  >
+    {/* Luxury foil diagonal streak reflection */}
+    <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-gold-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-2000 ease-out"></div>
+    
+    {/* Box content representation */}
+    ...
+  </div>
+</div>       
                   {/* Luxury foil diagonal streak reflection */}
                   <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-gold-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-2000 ease-out"></div>
                   
